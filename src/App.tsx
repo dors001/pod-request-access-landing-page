@@ -1,5 +1,14 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Show,
+} from "@chakra-ui/react";
 import Logo from "./Components/Logo";
+import TagLine from "./Components/TagLine";
 
 function App() {
   return (
@@ -10,8 +19,8 @@ function App() {
       }}
     >
       <GridItem area="header"></GridItem>
-      <GridItem area="main" bg="gold">
-        main
+      <GridItem area="main">
+        <TagLine />
       </GridItem>
       <Show above="md">
         <GridItem area="background" bg="blue">
