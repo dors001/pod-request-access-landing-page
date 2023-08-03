@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import Logo from "./Components/Logo";
 import TagLine from "./Components/TagLine";
+import Content from "./Components/Content";
 
 function App() {
   return (
@@ -19,9 +20,7 @@ function App() {
       }}
     >
       <GridItem area="header"></GridItem>
-      <GridItem area="main">
-        <TagLine />
-      </GridItem>
+      <GridItem area="main"></GridItem>
       <Show above="md">
         <GridItem area="background" bg="blue">
           background
