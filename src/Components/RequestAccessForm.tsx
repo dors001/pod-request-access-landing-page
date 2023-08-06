@@ -12,7 +12,7 @@ import {
 const RequestAccessForm = () => {
   return (
     <div>
-      <Box margin="1.5rem">
+      <Box margin="3rem 0">
         <InputField />
         <ButtonField />
       </Box>

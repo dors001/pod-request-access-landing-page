@@ -8,26 +8,32 @@ const Socials = () => {
   return (
     <div>
       <Show breakpoint="(max-width: 767px)">
-        <Flex justifyContent="space-around">
-          <img src={spotify} alt="Spotify" style={{ width: 56, height: 17 }} />
-          <img
-            src={apple}
-            alt="Apple Podcast"
-            style={{ width: 45, height: 17 }}
-          />
-          <Box alignSelf="center">
+        <Box margin="1rem 0">
+          <Flex justifyContent="space-around">
             <img
-              src={google}
-              alt="Google Podcast"
-              style={{ width: 73, height: 11 }}
+              src={spotify}
+              alt="Spotify"
+              style={{ width: 56, height: 17 }}
             />
-          </Box>
-          <img
-            src={pocketCasts}
-            alt="Pocket Casts"
-            style={{ width: 77, height: 15 }}
-          />
-        </Flex>
+            <img
+              src={apple}
+              alt="Apple Podcast"
+              style={{ width: 45, height: 17 }}
+            />
+            <Box alignSelf="center">
+              <img
+                src={google}
+                alt="Google Podcast"
+                style={{ width: 73, height: 11 }}
+              />
+            </Box>
+            <img
+              src={pocketCasts}
+              alt="Pocket Casts"
+              style={{ width: 77, height: 15 }}
+            />
+          </Flex>
+        </Box>
       </Show>
       <Show breakpoint="(min-width: 768px)">
         <Flex justifyContent="space-around">
