@@ -46,6 +46,35 @@ function App() {
             </Box>
           </PodBackground>
         </Show>
+        <Show breakpoint="(min-width: 1025px)">
+          <Box maxW="100%" paddingTop="102px">
+            <PodBackground>
+              <Box paddingLeft="165px">
+                <Logo />
+              </Box>
+              <Box
+                maxW="888px"
+                backgroundColor="rgb(18, 23, 37)"
+                paddingLeft="165px"
+              >
+                <TagLine />
+                <Content />
+                <Box maxW="427px" marginLeft="2.5rem">
+                  <RequestAccessForm />
+                </Box>
+                <Socials />
+              </Box>
+              <Box backgroundColor="rgb(18, 23, 37)" width="100%">
+                <Image
+                  src="/src/assets/desktop/bg-pattern-dots.svg"
+                  float="right"
+                  position="relative"
+                  bottom="75px"
+                />
+              </Box>
+            </PodBackground>
+          </Box>
+        </Show>
       </Box>
     </>
   );

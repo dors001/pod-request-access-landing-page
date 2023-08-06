@@ -25,6 +25,7 @@ const PodBackground = ({ children }: Props) => {
     bgDesktop: {
       backgroundImage: BgImageDesktop,
       backgroundRepeat: "no-repeat",
+      backgroundPosition: "right",
       filter: "auto",
     },
   };
@@ -38,7 +39,7 @@ const PodBackground = ({ children }: Props) => {
       backgroundColor: "rgb(18, 23, 37, 0)",
     },
     desktop: {
-      backgroundColor: "rgb(18, 23, 37)",
+      backgroundColor: "rgb(18, 23, 37, 0)",
     },
   };
 
@@ -55,7 +56,7 @@ const PodBackground = ({ children }: Props) => {
         </Box>
       </Show>
       <Show breakpoint="(min-width: 1024px)">
-        <Box sx={bgBoxStyles.bgDesktop} height="100%">
+        <Box sx={bgBoxStyles.bgDesktop} height="100vh">
           <Box sx={contentBoxStyles.desktop}>{children}</Box>
         </Box>
       </Show>
