@@ -1,12 +1,4 @@
-import {
-  Box,
-  Center,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Show,
-} from "@chakra-ui/react";
+import { Box, Heading, Show } from "@chakra-ui/react";
 
 const TagLine = () => {
   return (

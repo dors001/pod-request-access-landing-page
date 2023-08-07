@@ -38,6 +38,7 @@ const InputField = ({ onValidate, value, onEmailValidation }: Props) => {
           fontSize="14px"
           variant="filled"
           color="#2C344B"
+          backgroundColor="#2C344B"
           textColor="white"
           focusBorderColor="#C2CBE5"
           borderRadius="25px"
@@ -57,12 +58,16 @@ const InputField = ({ onValidate, value, onEmailValidation }: Props) => {
               opacity: "50%",
               paddingLeft: "1rem",
             }}
+            _hover={{
+              color: "#4b5266",
+            }}
             width="100%"
             height="56px"
             fontWeight="bold"
             fontSize="14px"
             variant="filled"
             color="#2C344B"
+            backgroundColor="#2C344B"
             textColor="white"
             focusBorderColor="#C2CBE5"
             borderRadius="25px"
