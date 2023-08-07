@@ -1,6 +1,15 @@
 import { Box, Show } from "@chakra-ui/react";
 
-const ButtonField = () => {
+export interface Props {
+  onEmailValidation: (getMessage: string) => void;
+  getMessage: string;
+}
+
+const ButtonField = ({ onEmailValidation, getMessage }: Props) => {
+  const handleClick = () => {
+    onEmailValidation(getMessage);
+  };
+
   return (
     <div>
       <Show breakpoint="(max-width: 767px)">
@@ -13,6 +22,7 @@ const ButtonField = () => {
           backgroundColor="#54E6AF"
           borderRadius="25px"
           padding="0 1rem"
+          onClick={handleClick}
         >
           Request Access
         </Box>

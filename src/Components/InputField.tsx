@@ -5,8 +5,27 @@ import {
   Show,
   Button,
 } from "@chakra-ui/react";
+import { useRef } from "react";
 
-const InputField = () => {
+interface Props {
+  onValidate: (validateText: string) => void;
+  value: string;
+  onEmailValidation: (getMessage: string) => void;
+}
+
+const InputField = ({ onValidate, value, onEmailValidation }: Props) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onValidate(e.target.value);
+  };
+
+  const ref = useRef<HTMLInputElement>(null);
+
+  const handleButtonClick = () => {
+    const inputValue = ref.current?.value || "";
+    onEmailValidation(inputValue);
+    onValidate(inputValue);
+  };
+
   return (
     <div>
       <Show breakpoint="(max-width: 767px)">
@@ -19,14 +38,19 @@ const InputField = () => {
           fontSize="14px"
           variant="filled"
           color="#2C344B"
+          textColor="white"
           focusBorderColor="#C2CBE5"
           borderRadius="25px"
           marginBottom="1rem"
+          value={value}
+          onChange={handleChange}
+          required
         />
       </Show>
       <Show breakpoint="(min-width: 768px)">
         <InputGroup>
           <Input
+            ref={ref}
             placeholder="Email address"
             _placeholder={{
               color: "white",
@@ -39,9 +63,13 @@ const InputField = () => {
             fontSize="14px"
             variant="filled"
             color="#2C344B"
+            textColor="white"
             focusBorderColor="#C2CBE5"
             borderRadius="25px"
             marginBottom="1rem"
+            value={value}
+            onChange={handleChange}
+            required
           />
           <InputRightElement
             width="162px"
@@ -57,6 +85,7 @@ const InputField = () => {
               backgroundColor="#54E6AF"
               borderRadius="25px"
               padding="0 1rem"
+              onClick={handleButtonClick}
             >
               Request Access
             </Button>
