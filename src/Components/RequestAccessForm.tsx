@@ -26,10 +26,14 @@ const RequestAccessForm = () => {
   return (
     <div>
       <Box margin="3rem 0">
-        <InputField value={email} onValidate={handleInputChange} onEmailValidation={validateEmail} />
+        <InputField
+          value={email}
+          onValidate={handleInputChange}
+          onEmailValidation={validateEmail}
+        />
         <ButtonField onEmailValidation={validateEmail} getMessage={email} />
         {message && (
-          <Box paddingTop="0.5rem" paddingLeft="0.5rem">
+          <Box paddingTop="0.5rem" paddingLeft="0.5rem" color="white">
             {message}
           </Box>
         )}
